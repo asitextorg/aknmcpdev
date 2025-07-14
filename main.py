@@ -64,7 +64,7 @@ def query_llm_for_odata(intent: str) -> str:
              "Return just the relative URL path after /data/ with no explanation or markdown."
              #"Example:CustTransactions$top=10&CurrencyCode ne 'USD'"
              #"Example: CustomersV3?$top=10  "
-             #"After you execute the OData query, you will return all informations. Return response as as it is from Odata in XML format"             
+             #"After you execute the OData query, you will return customer names and IDs. Return response as as it is from Odata in XML format"             
              },
             {"role": "user", "content": intent}
         ],
@@ -78,7 +78,7 @@ def query_llm_for_changes(intent: str) -> str:
         model=deployment,  # This refers to your Azure deployment name
         messages=[
             {
-                "role": "system", "content": "Return only customer names and CustomerAccount, amount, voucher, date return original OData response as it is in XML format."
+                "role": "system", "content": "Return all customer customer informations such as names, CustomerAccount, Address, customer group, crdit limit, block status etc.Return original OData response as it is in XML format."
                 "Return with no explanation or markdown."             
              },
             {"role": "user", "content": intent}
