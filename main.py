@@ -78,7 +78,7 @@ def query_llm_for_changes(intent: str) -> str:
         model=deployment,  # This refers to your Azure deployment name
         messages=[
             {
-                "role": "system", "content": "Return all customer customer informations such as names, CustomerAccount, Address, customer group, crdit limit, block status etc.Return original OData response as it is in XML format."
+                "role": "system", "content": "Return all information realted to customer account.Return original OData response as it is in XML format."
                 "Return with no explanation or markdown."             
              },
             {"role": "user", "content": intent}
