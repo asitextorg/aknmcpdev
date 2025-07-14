@@ -64,7 +64,7 @@ def query_llm_for_odata(intent: str) -> str:
              "Return just the relative URL path after /data/ with no explanation or markdown."
              #"Example:CustTransactions$top=10&CurrencyCode ne 'USD'"
              #"Example: CustomersV3?$top=10  "
-             #"After you execute the OData query, you will return customer names and IDs. Return response as as it is from Odata in XML format"             
+             #"After you execute the OData query, you will return all informations related to customer CustomerAccount. Return response as as it is from Odata in XML format"             
              },
             {"role": "user", "content": intent}
         ],
