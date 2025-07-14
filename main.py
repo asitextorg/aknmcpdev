@@ -111,7 +111,7 @@ def process_mcp(request: McpRequest):
         raise HTTPException(status_code=400, detail="Name and Context are required.")
 
     try:
-        if "cust"  in request.context.lower():
+        if "get customers"  in request.context.lower():
             query = query_llm_for_odata(request.context)
             print(f"Generated OData query: {query}")
             results = call_odata(query)
